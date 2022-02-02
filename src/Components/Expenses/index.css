@@ -1,0 +1,53 @@
+.expenses {
+    border:1px solid black;
+    width: 30%;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 40rem;
+    padding-top: 1rem;
+}
+
+.expenses table {
+    display: flex;
+    flex-flow: column;
+    height: 80%;
+    width: 80%;
+    margin-bottom: 3rem;
+}
+
+.expenses table th {
+    padding: 0.8rem;
+    margin-right: 0.8rem;
+}
+
+.expenses thead {
+    font-size: 18px;
+    flex: 0 0 auto;
+    width: calc(100% - 0.9em);
+    display: table;
+    table-layout: fixed;
+}
+
+.expenses tbody {
+    overflow-y: auto;
+    font-size: 16px;
+    flex: 1 1 auto;
+    display: block;
+}
+
+.expenses tbody tr {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+.expenses tbody tr:nth-child(odd) {
+    background-color: #ff33cc;
+}
+
+.expenses tbody tr:nth-child(even) {
+    background-color: #e495e4;
+}

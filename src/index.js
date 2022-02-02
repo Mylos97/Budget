@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {DataShower, Header} from './Components'
+import { DataShower, Header, Expenses } from './Components'
 import reportWebVitals from './reportWebVitals';
+import store from './State/store'
+import { Provider } from 'react-redux'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
-    <DataShower />
-
+    <Provider store={store}>
+      <Header />
+      <Expenses /> 
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

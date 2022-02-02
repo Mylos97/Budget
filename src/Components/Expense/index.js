@@ -1,13 +1,14 @@
 import React from 'react'
 
-const Expense = () => {
-
+const Expense = ( {props} ) => {
     return (
-        <div className='expense'>
-
-        </div>
+        <tr>
+            <th>{ props.category }</th>
+            <th>{ props.amount } kr</th>
+            <th>{ props.date }</th>
+        </tr>
     )
-    
+
 }
 
 export default Expense
