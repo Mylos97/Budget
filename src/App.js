@@ -1,23 +1,26 @@
 import logo from './logo.svg';
-import './App.css';
+import { DataShower, Header, Expenses, Popup } from './Components'
+import { useState, useRef } from 'react';
+
 
 function App() {
+
+  const [showPopup, setShowPopup] = useState(false)
+  
+  const doUpdate = useRef((someNewValue) => {
+    setTimeout(() => {
+      setShowPopup(someNewValue);
+    }, 0);
+  }).current;
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <Header />
+      <Expenses popup={doUpdate}/> 
+      {showPopup && 
+        <Popup closePopup={doUpdate} />
+      }
     </div>
   );
 }

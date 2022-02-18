@@ -17,7 +17,7 @@ const Header = () => {
             <Stack direction="row" spacing={2}>
 
             {MONTHS.map((month,i) => {
-                return <Button variant="contained" onClick={() => console.log(month.name)} key={i}>
+                return <Button variant="outlined" onClick={() => console.log(month.name)} key={i}>
                     {month.name}
                 </Button>
             })}
